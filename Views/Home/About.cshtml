@@ -1,0 +1,29 @@
+﻿@*
+     About.cshtml
+    url path = /Home/About
+*@
+@{
+}
+
+@model HttpContext
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> About View</title>
+</head>
+
+<body>
+    <h2>About View</h2>
+    <p>@ViewData["message"]</p>
+    <p></p>
+    <p>Name: @ViewBag.Name</p>
+    <p>Age: @ViewBag.Age</p>
+    <p>@Model.Request.Headers</p>
+
+
+</body>
+
+</html>
