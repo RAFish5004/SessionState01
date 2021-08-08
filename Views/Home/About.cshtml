@@ -1,6 +1,11 @@
 ﻿@*
      About.cshtml
     url path = /Home/About
+
+    Hot Reload: https://devblogs.microsoft.com/dotnet/introducing-net-hot-reload/
+
+    Pressing the button adds a new paragraph but retains the Session Id and Connection Id properties
+    Pressing Refresh resets the Connection Id but retains the Session Id
 *@
 @{
 }
@@ -12,17 +17,23 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="~/js/sessionScript.js"></script>
     <title> About View</title>
 </head>
 
 <body>
     <h2>About View</h2>
+    <button type="button" onclick="checkSession()">Check Session</button>
+
     <p>@ViewData["message"]</p>
     <p></p>
     <p>Name: @ViewBag.Name</p>
     <p>Age: @ViewBag.Age</p>
-    <p>@Model.Request.Headers</p>
-
+    <p>Connection Id: @Model.Connection.Id</p>
+    <p>Connection @Model.Connection.RemoteIpAddress</p>
+    <p>Session Id: @Model.Session.Id</p>
+    <p>User: @Model.User</p>
+    <p>Request path: @Model.Request.Path</p>
 
 </body>
 

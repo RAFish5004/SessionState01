@@ -37,11 +37,13 @@ namespace SessionState01.Controllers
 
         public IActionResult About()
         {
+            HttpContext ctx = this.HttpContext;
             ViewBag.Name = HttpContext.Session.GetString(SessionName);
             ViewBag.Age = HttpContext.Session.GetInt32(SessionAge);
             ViewData["Message"] = "Asp.Net Core !!!.";
 
-            return View();
+
+            return View(ctx);
         }
 
         public IActionResult Contact()
