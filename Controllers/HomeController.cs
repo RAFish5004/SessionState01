@@ -30,8 +30,8 @@ namespace SessionState01.Controllers
             // HttpContext is an abstract class
             // Session is a property of HttpContext that implements ISession interface
             // SetString SetInt32 are extension methods on Session
-            HttpContext.Session.SetString(SessionName, "Jarvik");
-            HttpContext.Session.SetInt32(SessionAge, 24);
+            HttpContext.Session.SetString(SessionName, "Russell");
+            HttpContext.Session.SetInt32(SessionAge, 71);
             return View();
         }
 
