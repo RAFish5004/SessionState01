@@ -39,7 +39,7 @@ namespace SessionState01.Models
             // PullHdrId set by db
             this.ItemId = cl.ItemId;
             this.UoM = cl.UoM;
-            this.QtyRequested = (int)cl.Qty;
+            this.QtyReq = (int)cl.Qty;
             this.Comment = cl.Comment;
             this.DateNeeded = cl.DateNeeded;
 
@@ -55,8 +55,8 @@ namespace SessionState01.Models
         public int PullHdrId { get; set; }
         [Required]
         [Range(minimum: 1, maximum: 5000, ErrorMessage = "Please enter a quantity greater than 1")]
-        public int QtyRequested { get; set; }
-        public int QtyShipped { get; set; }
+        public int QtyReq { get; set; }
+        public int QtyShp { get; set; }
 
         [DataType(DataType.Date)]
         public DateTime DateNeeded { get; set; }

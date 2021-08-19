@@ -65,7 +65,7 @@ namespace SessionState01.Models
             this.ItemId = pi.ItemId;
             //this.Description = ciRepository.CatalogItems.FirstOrDefault(ci => ci.ItemId == pi.ItemId).Description;
             this.UoM = pi.UoM;
-            this.Qty = pi.QtyRequested;
+            this.Qty = pi.QtyReq;
             this.DateNeeded = pi.DateNeeded;
             this.Comment = pi.Comment;
 
